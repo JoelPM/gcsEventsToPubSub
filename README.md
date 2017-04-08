@@ -35,23 +35,23 @@ There are a number of npm run tasks that have been added to (hopefully) make it 
 
 Assuming you've cloned the repo and installed the dependencies (see [Deploying](#deploying), you have the following tasks available:
 
-Task          | Description                                                                                  | Usage Example 
---------------|----------------------------------------------------------------------------------------------|--------------
-`f`           | An alias to the `functions` command provided by the emulator.                                | `npm run f help`
-`f-start`     | Start the emulator.                                                                          | `npm run f-start`
-`f-deploy`    | Deploy the function to the emmulator.                                                        | `npm run f-deploy bucket-to-watch`
-`f-inspect`   | Make the function available for debugging.                                                   | `npm run f-inspect`
-`f-logs`      | Read the logs.                                                                               | `npm run f-logs`
-`f-status`    | Get status of the emulator.                                                                  | `npm run f-status`
-`f-call`      | Generates a GCS event call using the data in test/gcs_add_event.json.                        | `npm run f-call`
-`f-delete`    | Undeploys the cloud function from the emulator.                                              | `npm run f-delete`
-`f-stop`      | Stops the emulator gracefully.                                                               | `npm run f-stop`
-`f-kill`      | Stops the emulator with a stern glare and a no-nonsense tone of voice.                       | `npm run f-kill`
-`prod-deploy` | Deploys the Cloud Function to GCP (assumes you have the current project enabled via gcloud). | `npm run prod-deploy MY_STAGING_BUCKET MY_WATCH_BUCKET`
+Task               | Description                                                                                  | Usage Example 
+-------------------|----------------------------------------------------------------------------------------------|--------------
+f                  | An alias to the `functions` command provided by the emulator.                                | `npm run f help`
+f&#x2011;start     | Start the emulator.                                                                          | `npm run f-start`
+f&#x2011;deploy    | Deploy the function to the emmulator.                                                        | `npm run f-deploy bucket-to-watch`
+f&#x2011;inspect   | Make the function available for debugging.                                                   | `npm run f-inspect`
+f&#x2011;logs      | Read the logs.                                                                               | `npm run f-logs`
+f&#x2011;status    | Get status of the emulator.                                                                  | `npm run f-status`
+f&#x2011;call      | Generates a GCS event call using the data in test/gcs_add_event.json.                        | `npm run f-call`
+f&#x2011;delete    | Undeploys the cloud function from the emulator.                                              | `npm run f-delete`
+f&#x2011;stop      | Stops the emulator gracefully.                                                               | `npm run f-stop`
+f&#x2011;kill      | Stops the emulator with a stern glare and a no-nonsense tone of voice.                       | `npm run f-kill`
+prod&#x2011;deploy | Deploys the Cloud Function to GCP (assumes you have the current project enabled via gcloud). | `npm run prod-deploy MY_STAGING_BUCKET MY_WATCH_BUCKET`
 
 If you want to run things locally and connect with the chomre devtools debugger, you'd do this:
 
-```zsh
+```shell
 [joelmeyer@persevere:perf/gcsEventsToPubSub]$ npm run f-start
 
 > gcsEventsToPubSub@0.0.1 f-start /Users/joelmeyer/src/perf/gcsEventsToPubSub
@@ -94,7 +94,7 @@ Debugger for gcsEventsToPubSub listening on port 9229.
 
 And then you'd paste that devtools URL into your browser of choice (as long as it's Chrome):
 
-![Chrome Devtools Debugger Source View][gcfChromeDebugger]
+![Chrome Devtools Debugger Source View](images/gcfChromeDebugger.png)
 
 Trigger a call:
 ```zsh
@@ -108,8 +108,6 @@ ExecutionId: b2406972-e498-48c6-97d2-e9e5c4561296
 
 And view the results in the console:
 
-![Chrome Devtools Console View][gcfCallResults]
+![Chrome Devtools Console View](images/gcfCallResults.png)
 
 And there you have it.
-[gcfChromeDebugger]: images/gcfChromeDebugger.png
-[gcfCallResults]: images/gcfCallResults.png
