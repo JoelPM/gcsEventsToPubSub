@@ -62,12 +62,12 @@ Google Cloud Functions Emulator STARTED
 ┌──────────────┬──────────────────────────────────────────────────┬─────────────────┐
 │ Name         │ Trigger                                          │ Resource        │
 ├──────────────┼──────────────────────────────────────────────────┼─────────────────┤
-│ csEventsToPS │ providers/cloud.storage/eventTypes/object.change │ perf-trace-data │
+│ csEventsToPS │ providers/cloud.storage/eventTypes/object.change │ my-bucket-name  │
 └──────────────┴──────────────────────────────────────────────────┴─────────────────┘
 [joelmeyer@persevere:perf/gcsEventsToPubSub]$ npm run f-deploy MY-BUCKET-NAME
 
 > gcsEventsToPubSub@0.0.1 f-deploy /Users/joelmeyer/src/perf/gcsEventsToPubSub
-> functions deploy gcsEventsToPubSub --trigger-bucket "perf-trace-data"
+> functions deploy gcsEventsToPubSub --trigger-bucket "my-bucket-name"
 
 Function gcsEventsToPubSub deployed.
 ┌────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -77,7 +77,7 @@ Function gcsEventsToPubSub deployed.
 ├────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │ Trigger    │ providers/cloud.storage/eventTypes/object.change                                                           │
 ├────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ Resource   │ perf-trace-data                                                                                            │
+│ Resource   │ my-bucket-name                                                                                             │
 ├────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │ Local path │ /Users/joelmeyer/src/perf/gcsEventsToPubSub                                                                │
 ├────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
