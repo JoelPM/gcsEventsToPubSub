@@ -1,0 +1,34 @@
+{
+  "name": "gcsEventsToPubSub",
+  "version": "0.0.1",
+  "description": "Publishes Google CloudStorage change events to PubSub.",
+  "main": "index.js",
+  "scripts": {
+    "test":         "echo \"Error: no test specified\" && exit 1",
+
+    "f":         "./node_modules/.bin/functions",
+    "f-start":   "./node_modules/.bin/functions start",
+    "f-deploy":  "./node_modules/.bin/functions deploy gcsEventsToPubSub --trigger-bucket",
+    "f-inspect": "./node_modules/.bin/functions inspect gcsEventsToPubSub && npm run f-logs | grep devtools",
+    "f-logs":    "./node_modules/.bin/functions logs read",
+    "f-status":  "./node_modules/.bin/functions status",
+    "f-call":    "./node_modules/.bin/functions call gcsEventsToPubSub --file=./test/gcs_add_event.json",
+    "f-delete":  "./node_modules/.bin/functions delete gcsEventsToPubSub",
+    "f-stop":    "./node_modules/.bin/functions stop",
+    "f-kill":    "./node_modules/.bin/functions kill",
+
+    "prod-deploy":   "./deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:JoelPM/gcsEventsToPubSub.git"
+  },
+  "author": "Joel Meyer <joel.meyer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.15"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.9.0"
+  }
+}

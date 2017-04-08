@@ -1,0 +1,20 @@
+{
+    "bucket": "my-bucket-name",
+    "contentEncoding": "gzip",
+    "contentLanguage": "en",
+    "contentType": "text/plain",
+    "crc32c": "iq4xFA==",
+    "generation": "1491495785774542",
+    "id": "my-bucket-name/incoming/all_events.log.20170406162001.1491495541.1491495601.txt.gz/1491495785774542",
+    "kind": "storage#object",
+    "md5Hash": "M2ZmMzBhNDg5N2I0Y2MyMDc5ZjY3NzkyOTM3YmY1OGM=",
+    "mediaLink": "https://www.googleapis.com/storage/v1/b/my-bucket-name/o/incoming/all_events.log.20170406162001.1491495541.1491495601.txt.gz?generation=1491495785774542&alt=media",
+    "metageneration": "1",
+    "name": "incoming/all_events.log.20170406162001.1491495541.1491495601.txt.gz",
+    "resourceState": "exists",
+    "selfLink": "https://www.googleapis.com/storage/v1/b/my-bucket-name/o/incoming/all_events.log.20170406162001.1491495541.1491495601.txt.gz",
+    "size": "68287981",
+    "storageClass": "REGIONAL",
+    "timeCreated": "2017-04-06T16:23:05.760Z",
+    "updated": "2017-04-06T16:23:05.760Z"
+}
